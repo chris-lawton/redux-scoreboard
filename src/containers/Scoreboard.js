@@ -64,17 +64,7 @@ export default class Scoreboard extends Component{
       <div className="scoreboard">
         <Header players={players} />
         <div className="players">
-          {this.state.players.map(function(player, index) {
-             return (
-               <Player
-                 name={player.name}
-                 score={player.score}
-                 key={player.name}
-                 onScoreChange={(delta) => this.onScoreChange(index, delta)}
-                 onRemove={() => this.onRemovePlayer(index)}
-               />
-             );
-           }.bind(this))}
+          { playerComponents }
         </div>
         <AddPlayerForm onAdd={this.onAddPlayer} />
       </div>
