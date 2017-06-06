@@ -66,7 +66,7 @@ export default class Scoreboard extends Component{
         <div className="players">
           { playerComponents }
         </div>
-        <AddPlayerForm onAdd={this.onAddPlayer} />
+        <AddPlayerForm addPlayer={addPlayer} />
       </div>
     );
   }
