@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import { connect } from 'react-redux';
 import AddPlayerForm from '../components/AddPlayerForm';
 import Player from '../components/Player';
 import Header from '../components/Header';
@@ -68,3 +69,5 @@ const mapStateToProps = state => (
     players: state
   }
 );
+
+export default connect(mapStateToProps)(Scoreboard);
