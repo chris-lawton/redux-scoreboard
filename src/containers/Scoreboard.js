@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import AddPlayerForm from '../components/AddPlayerForm';
 import Player from '../components/Player';
 import Header from '../components/Header';
@@ -26,6 +26,9 @@ export default class Scoreboard extends Component{
     this.state.players[index].score += delta;
     this.setState(this.state);
   }
+  static propTypes = {
+    players: PropTypes.array.isRequired
+  };
 
   onAddPlayer = (name) => {
     this.state.players.push({ name: name, score: 0 });
