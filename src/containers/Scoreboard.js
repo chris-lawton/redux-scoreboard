@@ -59,3 +59,9 @@ export default class Scoreboard extends Component{
     );
   }
 }
+
+const mapStateToProps = state => (
+  {
+    players: state
+  }
+);
