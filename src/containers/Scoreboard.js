@@ -62,7 +62,7 @@ export default class Scoreboard extends Component{
 
     return (
       <div className="scoreboard">
-        <Header players={this.state.players} />
+        <Header players={players} />
         <div className="players">
           {this.state.players.map(function(player, index) {
              return (
