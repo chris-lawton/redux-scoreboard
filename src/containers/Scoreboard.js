@@ -48,6 +48,18 @@ export default class Scoreboard extends Component{
     const addPlayer = bindActionCreators(PlayerActionCreators.addPlayer, dispatch);
     const removePlayer = bindActionCreators(PlayerActionCreators.removePlayer, dispatch);
     const updatePlayerScore = bindActionCreators(PlayerActionCreators.updatePlayerScore, dispatch);
+
+    const playerComponents = players.map((player, index) => (
+      <Player
+        index={index}
+        name={player.name}
+        score={player.score}
+        key={player.name}
+        updatePlayerScore={updatePlayerScore}
+        removePlayer={removePlayer}
+      />
+    ));
+
     return (
       <div className="scoreboard">
         <Header players={this.state.players} />
