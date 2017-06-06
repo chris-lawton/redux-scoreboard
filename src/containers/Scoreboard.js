@@ -6,7 +6,7 @@ import AddPlayerForm from '../components/AddPlayerForm';
 import Player from '../components/Player';
 import Header from '../components/Header';
 
-export default class Scoreboard extends Component{
+class Scoreboard extends Component{
 
   state = {
     players: [
